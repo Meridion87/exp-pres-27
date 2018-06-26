@@ -6,13 +6,15 @@ class ProductsController < ApplicationController
 
     @product.save
     redirect_to category
+    # redirect_to product.category
+    # redirect_to category_path (id: product.category.id)
 
   end
 
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to show_path
+    redirect_to @product.category #redirecciona a la categorìa del producto borrado
 
   end
 

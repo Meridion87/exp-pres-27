@@ -31,13 +31,13 @@
     <th>Precio</th>
   </tr>
   <% @products.each do |p| %>
-    <%if p.category_id == @category.id%>
+    <!-- <%if p.category_id == @category.id%> -->
     <tr>
       <td><%=p.name%></td>
       <td><%=p.price%></td>
-      <td><%=link_to "Borrar", category_path, method: :delete, class: 'btn btn-danger'%></td>
+      <td><%=link_to "Borrar", category_product_path(@category, p), method: :delete, class: 'btn btn-danger'%></td>
     </tr>
-    <%end%>
+    <!-- <%end%> -->
   <% end %>
 </table>
 
