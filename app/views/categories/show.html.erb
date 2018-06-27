@@ -2,10 +2,11 @@
 
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre categoría: </strong>
   <%= @category.name %>
 </p>
 
+<p>Crear producto</p>
 <%= form_with(model: [@category, @product]) do |form| %>
   <div class="field">
     <%= form.label :name %>
